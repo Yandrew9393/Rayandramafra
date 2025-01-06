@@ -1,0 +1,177 @@
+/* Base para dispositivos móveis */
+body {
+    height: auto;
+    background-color: rgba(227, 113, 250, 0.116);
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 1em;
+}
+
+.cabecalho nav {
+    display: none; /* Menu hamburguer ativado em telas menores */
+}
+
+.menu {
+    display: block;
+    cursor: pointer;
+    font-size: 1.5em;
+    color: #000;
+}
+
+.cabecalho ul {
+    display: none;
+    flex-direction: column;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+.cabecalho ul li {
+    margin: 0.5em 0;
+}
+
+.cabecalho ul li a {
+    text-decoration: none;
+    color: #000;
+    font-size: 1.2em;
+    transition: color 0.3s;
+}
+
+.cabecalho ul li a:hover {
+    font-weight: bold;
+    color: violet;
+}
+
+.home {
+    padding: 2em 1em;
+    text-align: center;
+}
+
+.quem-somos-total {
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1em;
+}
+
+.quem-somos-total article {
+    width: 100%;
+    height: auto;
+    margin-bottom: 1em;
+}
+
+.referencias {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1em;
+}
+
+.referencias article {
+    width: 90%;
+    margin-bottom: 1em;
+    background-color: #ffffff;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.466);
+}
+
+.servico {
+    margin-top: 2em;
+    background-color: #ffffff;
+    padding: 1em;
+}
+
+.nosso-servico-total {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nosso-servico {
+    width: 90%;
+    margin-bottom: 1em;
+    box-shadow: 5px 5px 5px #00000049;
+}
+
+/* Ajustes para telas maiores */
+@media (min-width: 600px) {
+    .cabecalho {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1em 2em;
+    }
+
+    .cabecalho nav {
+        display: block;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    .cabecalho ul {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .cabecalho ul li {
+        margin: 0 1em;
+    }
+
+    .quem-somos-total {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .quem-somos-total article {
+        width: 48%;
+    }
+
+    .referencias {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .referencias article {
+        width: 30%;
+    }
+
+    .nosso-servico-total {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .nosso-servico {
+        width: 30%;
+    }
+
+    .apresentacao-time {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .profissional {
+        width: 30%;
+    }
+
+    .contato {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .contato article:first-child {
+        width: 45%;
+    }
+
+    .contato article {
+        width: 45%;
+    }
+}
