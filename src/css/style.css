@@ -63,6 +63,24 @@ h1 {
     font-size: 1.5rem;
     color: black;
 }
+
+.hamburguer  {
+    display: none;
+    border: none;
+    background: none;
+    border-top: 3px solid #000000;
+    cursor: pointer;
+}
+
+.hamburguer::before,
+.hamburguer::after{
+    content: " ";
+    display: block;
+    width: 30px;
+    height: 3px;
+    background: #000000;
+    margin-top: 5px;
+}
 .nav {
     display: none; /* Escondido por padrão */
     flex-direction: column;
@@ -186,6 +204,7 @@ footer .icon:hover {
         justify-content: space-between;
         padding: 1em 2em;
     }
+    
 
     .nav {
         display: flex; /* Exibido por padrão no desktop */
